@@ -40,11 +40,11 @@ To deploy main template (this will create a new log analytics workspace):
 
 **To deploy into an existing log analytics workspace**
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FLuckyJC%2FAzure-Security-Center%2Fmaster%2FSecure%2520Score%2FGet-SecureScoreData%2Fazuredeploy-existingLogA.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fluckyjc%2FAzure-Security-Center%2Fmaster%2FSecure%2520Score%2FGet-SecureScoreData%2Fazuredeploy-existingLogA.json" target="_blank">
 <img src="../assets/deploytoazure.png"/>
 </a>
 
-<a href="https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FLuckyJC%2FAzure-Security-Center%2Fmaster%2FSecure%2520Score%2FGet-SecureScoreData%2Fazuredeploy-existingLogA.json" target="_blank">
+<a href="https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fluckyjc%2FAzure-Security-Center%2Fmaster%2FSecure%2520Score%2FGet-SecureScoreData%2Fazuredeploy-existingLogA.json" target="_blank">
 <img src="../assets/deploytoazuregov.png"/>
 </a>
 
@@ -53,3 +53,5 @@ To deploy main template (this will create a new log analytics workspace):
 ---
 
 Please notice that only on the first time you need to manually trigger the Logic App after adding the Managed Identity to the subscriptions. In the deployed Log Analytics you can find your data under Custom Logs. Four new tables will be created: SecureScore_CL, SecureScoreAssessments_CL, SecureScoreControls_CL and Subscriptions_CL. On the first time it can take few minutes until you will be able to see the data in your Log Analytics workspace.
+
+**Azure Gov** You will need to update the HTTP requests through the logic app designer to use https://management.usgovcloudapi.net instead of https://management.azure.com.
